@@ -10,7 +10,7 @@ EXEC jobs.sp_add_job
 EXEC jobs.sp_add_jobstep
 @job_name='DeployLastExtracted',
 @command=N'
-IF (OBJECT_ID(''LastExtracted'')) IS NOT NULL DROP TABLE JobTimestamps
+IF (OBJECT_ID(''LastExtracted'')) IS NOT NULL DROP TABLE LastExtracted
 CREATE TABLE [dbo].[LastExtracted]
 (
     [LastExtractedVenueRowVersion]  VARBINARY(8) NOT NULL DEFAULT 0x0000000000000000,
